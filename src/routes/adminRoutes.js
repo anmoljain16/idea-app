@@ -4,6 +4,6 @@ const { getAllIdeas } = require('../controllers/adminController');
 
 const router = express.Router();
 
-router.get('/ideas', protect,admin ,getAllIdeas);
+router.get('/ideas', protect ,getAllIdeas);
 
 module.exports = router;
