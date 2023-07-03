@@ -1,5 +1,5 @@
 const express = require('express');
-const { protect, admin } = require('../utils/authMiddleware');
+const { protect } = require('../utils/authMiddleware');
 const { getAllIdeas } = require('../controllers/adminController');
 
 const router = express.Router();
