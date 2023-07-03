@@ -20,23 +20,23 @@ exports.protect = (req, res, next) => {
 };
 
 // Middleware to restrict access to admin users
-exports.admin = (req, res, next) => {
-  // console.log(req)
-  const userID = req.user.userId;
-  console.log(userID)
-  const fUser =  User.findById(userID);
+// exports.admin = (req, res, next) => {
+//   // console.log(req)
+//   const userID = req.user.userId;
+//   console.log(userID)
+//   const fUser =  User.findById(userID);
 
-  if (!fUser) {
-    return res.status(404).json({ error: 'User not found' });
-  }
+//   if (!fUser) {
+//     return res.status(404).json({ error: 'User not found' });
+//   }
 
 
 
-  console.log(fUser);
-  if (req.user.role !== 'admin') {
-    return res.status(403).json({ error: 'Access denied',
+//   console.log(fUser);
+//   if (req.user.role !== 'admin') {
+//     return res.status(403).json({ error: 'Access denied',
     
-  });
-  }
-  next();
-};
+//   });
+//   }
+//   next();
+// };
